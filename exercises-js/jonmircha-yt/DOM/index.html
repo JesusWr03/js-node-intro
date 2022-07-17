@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="animate.css" />
+    </head>
+    <body class="bg-neutral-100 text-neutral-800">
+        <!-- header  -->
+        <header class="sticky top-0 z-10 shadow-sm py-3 text-center">
+            <h1 class="text-2xl">DOM EXERCISES</h1>
+        </header>
+
+        <!-- hidden menu -->
+        <div
+            id="menu"
+            class="bg-black bg-opacity-20 backdrop-blur-sm shadow-sm fixed top-0 h-screen w-screen duration-300 transition-transform -translate-x-full"
+        >
+            <nav class="h-full">
+                <ul
+                    class="text-3xl h-full w-full flex justify-center items-center flex-col gap-7"
+                >
+                    <li>
+                        <a
+                            class="text-center hover:underline py-1.5 px-9 rounded-md"
+                            href="#section-1"
+                            >Section 1</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="text-center hover:underline py-1.5 px-9 rounded-md"
+                            href="#section-2"
+                            >Section 2</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="text-center hover:underline py-1.5 px-9 rounded-md"
+                            href="#section-3"
+                            >Section 3</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="text-center hover:underline py-1.5 px-9 rounded-md"
+                            href="#section-4"
+                            >Section 4</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- main page  -->
+        <main>
+            <!-- Digital Clock & Alarm-->
+            <section
+                id="section-1"
+                class="min-h-screen pt-14 flex flex-col items-center gap-6"
+            >
+                <h2 class="text-3xl font-bold">Digital Clock & Alarm</h2>
+
+                <div id="clock" class="text-5xl"></div>
+
+                <div class="flex justify-center flex-col items-center gap-6">
+                    <div class="clock flex gap-3">
+                        <button
+                            id="start-clock"
+                            class="flex bg-neutral-300 text-neutral-900 shadow-sm color font-semibold rounded-full py-1.5 px-2.5 items-center disabled:opacity-40"
+                        >
+                            Start Clock
+                            <span
+                                ><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    fill="currentColor"
+                                >
+                                    <path d="M7 6v12l10-6z"></path></svg
+                            ></span>
+                        </button>
+                        <button
+                            id="stop-clock"
+                            class="flex bg-neutral-300 text-neutral-900 shadow-sm color font-semibold rounded-full py-1.5 px-2.5 items-center"
+                        >
+                            Stop Clock
+                            <span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    fill="currentColor"
+                                >
+                                    <path d="M7 7h10v10H7z"></path>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- alarm  -->
+                    <div class="alarm flex gap-3">
+                        <button
+                            id="start-alarm"
+                            class="flex bg-neutral-300 text-neutral-900 shadow-sm color font-semibold rounded-full py-1.5 px-2.5 items-center disabled:opacity-40"
+                        >
+                            Start Alarm
+                            <span
+                                ><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    fill="currentColor"
+                                >
+                                    <path d="M7 6v12l10-6z"></path></svg
+                            ></span>
+                        </button>
+                        <button
+                            id="stop-alarm"
+                            class="flex bg-neutral-300 text-neutral-900 shadow-sm color font-semibold rounded-full py-1.5 px-2.5 items-center"
+                        >
+                            Stop Alarm
+                            <span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    fill="currentColor"
+                                >
+                                    <path d="M7 7h10v10H7z"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <audio
+                            src="assets/alarm.wav"
+                            loop
+                            muted
+                            autoplay
+                        ></audio>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ball -->
+            <section id="section-2" class="min-h-screen pt-14 text-center">
+                <h2 class="text-3xl font-bold">Section 2</h2>
+
+                <!-- stage  -->
+                <article
+                    class="stage h-96 max-w-5xl m-auto mt-10 flex border border-neutral-400"
+                >
+                    <div
+                        class="ball m-auto w-14 h-14 rounded-full bg-neutral-300"
+                    ></div>
+                </article>
+            </section>
+
+            <!-- countdown -->
+            <section id="section-3" class="min-h-screen pt-14 text-center">
+                <h2 class="text-3xl font-bold">Section 3</h2>
+
+                <div id="countdown" class="mt-4 text-xl"></div>
+            </section>
+
+            <!-- responsible responsive design -->
+            <section
+                id="section-4"
+                class="min-h-screen pt-14 text-center flex flex-col items-center"
+            >
+                <h2 class="text-3xl font-bold">
+                    Responsible Responsive Design
+                </h2>
+
+                <div id="youtube"></div>
+                <div id="gmaps"></div>
+            </section>
+
+            <!-- Responsive Tester -->
+            <section id="section-5" class="min-h-screen pt-14 text-center">
+                <h2 class="text-3xl font-bold">Responsive Tester</h2>
+
+                <form
+                    id="responsive-tester"
+                    class="mt-6 flex flex-col items-center gap-2"
+                >
+                    <input
+                        class="bg-neutral-500 bg-opacity-20 rounded-full p-2"
+                        name="direction"
+                        type="url"
+                        placeholder="URL"
+                        required
+                    />
+                    <input
+                        class="bg-neutral-500 bg-opacity-20 rounded-full p-2"
+                        name="width"
+                        type="text"
+                        placeholder="Width"
+                        required
+                    />
+                    <input
+                        class="bg-neutral-500 bg-opacity-20 rounded-full p-2"
+                        name="height"
+                        type="text"
+                        placeholder="Height"
+                        required
+                    />
+                    <div class="mt-2 mx-auto">
+                        <input class="py-1.5 px-4 rounded-full text-current bg-green-500 bg-opacity-60" name="launch" type="submit" value="Launch" />
+                        <input class="py-1.5 px-4  rounded-full text-current bg-red-500 bg-opacity-60" name="close" type="button" value="Close" />
+                    </div>
+                </form>
+            </section>
+
+            <!-- User Agent -->
+            <section id="section-6" class="min-h-screen pt-14 text-center">
+                <h2 class="text-3xl font-bold">User Agent</h2>
+
+                <div id="user-device"></div>
+            </section>
+        </main>
+
+        <!-- button burguer menu  -->
+        <div class="fixed bottom-6 right-6 z-10">
+            <button id="btnCTA" class="hamburguer hamburger--elastic">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+        <!-- button scroll -->
+        <button
+            class="scroll-top-btn w-10 h-10 text-6xl text-neutral-800 rounded-full fixed right-20 bottom-6 bg-neutral-300 hover:bg-neutral-200 hover:text-neutral-700 transition-opacity duration-1000 hidden"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+            >
+                <path
+                    fill-rule="evenodd"
+                    d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                />
+            </svg>
+        </button>
+        <!-- dark/light mode -->
+        <button class="dark-mode-btn w-10 h-10 fixed bottom-6 left-6">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-inherit"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+            >
+                <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                />
+            </svg>
+        </button>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
